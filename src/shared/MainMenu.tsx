@@ -1,8 +1,14 @@
-import { NavLink } from "react-router-dom";
 import { MainMenuRootList } from "@/shared/mobile-menu/MobileMenuCloneContext";
+import { NavLink } from "react-router-dom";
 
 const MEGA_ARROW = (
-  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="13"
+    height="13"
+    viewBox="0 0 13 13"
+    fill="none"
+  >
     <path
       d="M10.0208 3.41421L1.41421 12.0208L0 10.6066L8.60659 2H1.02082V0H12.0208V11H10.0208V3.41421Z"
       fill="currentColor"
@@ -11,6 +17,16 @@ const MEGA_ARROW = (
 );
 
 type Item = { to: string; label: string };
+// Customs
+const intel_links1: Item[] = [
+  { to: "/services", label: "Service" },// Services-2
+  { to: "/team", label: "Team" },
+  { to: "/pricing", label: "Pricing" },
+];
+const intel_links2: Item[] = [
+  { to: "/about", label: "About us" }, // abount-1
+  { to: "/faqs", label: "FAQs" },
+];
 
 const HOME_LIGHT: Item[] = [
   { to: "/", label: "01. Creative Agency" },
@@ -120,19 +136,40 @@ const CONTACT_LINKS: Item[] = [
 
 function MenuLink({ to, children }: { to: string; children: React.ReactNode }) {
   return (
-    <NavLink to={to} className={({ isActive }) => (isActive ? "active" : undefined)}>
+    <NavLink
+      to={to}
+      className={({ isActive }) => (isActive ? "active" : undefined)}
+    >
       {children}
     </NavLink>
   );
 }
 
-function MegaColumn({ title, items }: { title: string; items: Item[] }) {
+// function MegaColumn({ title, items }: { title: string; items: Item[] }) {
+//   return (
+//     <div className="at-megamenu-box">
+//       {/* <div className="at-megamenu-title-wrap">
+//         <span className="at-megamenu-title">{title}</span>
+//         {MEGA_ARROW}
+//       </div> */}
+//       <ul>
+//         {items.map((it) => (
+//           <li key={it.label}>
+//             <MenuLink to={it.to}>{it.label}</MenuLink>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+function MegaColumn({ items }: { items: Item[] }) {
   return (
     <div className="at-megamenu-box">
-      <div className="at-megamenu-title-wrap">
+      {/* <div className="at-megamenu-title-wrap">
         <span className="at-megamenu-title">{title}</span>
         {MEGA_ARROW}
-      </div>
+      </div> */}
       <ul>
         {items.map((it) => (
           <li key={it.label}>
@@ -140,6 +177,26 @@ function MegaColumn({ title, items }: { title: string; items: Item[] }) {
           </li>
         ))}
       </ul>
+    </div>
+  );
+}
+// Customize MagaColam
+function MegaColumnCustoms({ title, to }: { title: string; to: string }) {
+  return (
+    <div className="at-megamenu-box">
+      <div className="at-megamenu-title-wrap">
+        <span className="at-megamenu-title">
+          <NavLink to={to}>{title}</NavLink>
+        </span>
+        {/* {MEGA_ARROW} */}
+      </div>
+      {/* <ul>
+        {items.map((it) => (
+          <li key={it.label}>
+            <MenuLink to={it.to}>{it.label}</MenuLink>
+          </li>
+        ))}
+      </ul> */}
     </div>
   );
 }
@@ -156,9 +213,18 @@ function LinkSwap({ label }: { label: string }) {
 export default function MainMenu() {
   return (
     <MainMenuRootList>
-      <li className="has-dropdown">
-        <a href="#" onClick={(e) => e.preventDefault()}>
+      <li className="with-out-dropdown">
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "active" : undefined)}
+        >
           <LinkSwap label="Home" />
+        </NavLink>
+      </li>
+      {/* 
+          Home pages other tamplate
+          <a href="#" onClick={(e) => e.preventDefault()}> replaced by Navlink
+          <LinkSwap label="Page" />
         </a>
         <div className="at-submenu submenu at-megamenu">
           <div className="row">
@@ -169,84 +235,55 @@ export default function MainMenu() {
               <MegaColumn title="Dark Version" items={HOME_DARK} />
             </div>
           </div>
-        </div>
-      </li>
+        </div> 
+        */}
 
       <li className="has-dropdown">
         <a href="#" onClick={(e) => e.preventDefault()}>
-          <LinkSwap label="Page" />
+          <LinkSwap label="Intel" />
         </a>
         <div className="at-submenu submenu at-megamenu">
           <div className="row">
-            <div className="col-xl-4">
-              <MegaColumn title="About Us" items={ABOUT_LINKS} />
+            <div className="col-xl-5">
+              <MegaColumn items={intel_links1} />
             </div>
-            <div className="col-xl-4">
-              <MegaColumn title="Services" items={SERVICE_LINKS} />
+            <div className="col-xl-5">
+              <MegaColumn items={intel_links2} />
             </div>
-            <div className="col-xl-4">
+            {/* <div className="col-xl-4">
               <MegaColumn title="Other" items={OTHER_LINKS} />
-            </div>
+            </div> */}
           </div>
         </div>
       </li>
 
-      <li className="has-dropdown">
-        <a href="#" onClick={(e) => e.preventDefault()}>
-          <LinkSwap label="Portfolio" />
-        </a>
-        <div className="at-submenu submenu at-megamenu">
-          <div className="row">
-            <div className="col-xl-4">
-              <MegaColumn title="Creative" items={PORTFOLIO_CREATIVE} />
-            </div>
-            <div className="col-xl-4">
-              <MegaColumn title="Classic" items={PORTFOLIO_CLASSIC} />
-            </div>
-            <div className="col-xl-4">
-              <MegaColumn title="Details" items={PORTFOLIO_DETAILS} />
-            </div>
-          </div>
-        </div>
+      
+      <li className="with-out-dropdown">
+        <NavLink
+          to="/portfolio-split"
+          className={({ isActive }) => (isActive ? "active" : undefined)}
+        >
+          <LinkSwap label="Portfelio" />
+        </NavLink>
       </li>
 
-      <li className="has-dropdown">
-        <a href="#" onClick={(e) => e.preventDefault()}>
-          <LinkSwap label="Shop" />
-        </a>
-        <ul className="at-submenu submenu">
-          {SHOP_LINKS.map((l) => (
-            <li key={l.label}>
-              <MenuLink to={l.to}>{l.label}</MenuLink>
-            </li>
-          ))}
-        </ul>
-      </li>
+      
 
-      <li className="has-dropdown">
-        <a href="#" onClick={(e) => e.preventDefault()}>
-          <LinkSwap label="News" />
-        </a>
-        <ul className="at-submenu submenu">
-          {NEWS_LINKS.map((l) => (
-            <li key={l.label}>
-              <MenuLink to={l.to}>{l.label}</MenuLink>
-            </li>
-          ))}
-        </ul>
+      <li className="with-out-dropdown">
+        <NavLink
+          to="/archive-2"
+          className={({ isActive }) => (isActive ? "active" : undefined)}
+        >
+          <LinkSwap label="Blog" />
+        </NavLink>
       </li>
-
-      <li className="has-dropdown">
-        <a href="#" onClick={(e) => e.preventDefault()}>
+      <li className="with-out-dropdown">
+        <NavLink
+          to="/contact-1"
+          className={({ isActive }) => (isActive ? "active" : undefined)}
+        >
           <LinkSwap label="Contact" />
-        </a>
-        <ul className="at-submenu submenu">
-          {CONTACT_LINKS.map((l) => (
-            <li key={l.label}>
-              <MenuLink to={l.to}>{l.label}</MenuLink>
-            </li>
-          ))}
-        </ul>
+        </NavLink>
       </li>
     </MainMenuRootList>
   );

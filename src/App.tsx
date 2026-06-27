@@ -62,26 +62,32 @@ import NotFoundPage from "@/pages/NotFoundPage";
 export default function App() {
   return (
     <Routes>
-      <Route element={<MainLayout headerStyle={1} footerStyle={1} />}>
-        <Route path="/" element={<Home1Page />} />
-        <Route path="/index-dark" element={<Home1Page />} />
+      <Route element={<MainLayout headerStyle={8} footerStyle={8} />}> // change
+        <Route path="/" element={<Home8Page />} />
+        <Route path="/index-dark" element={<Home8Page />} />
       </Route>
       <Route element={<MainLayout headerStyle={1} footerStyle={1} noFooter />}>
         <Route path="/portfolio-curtain" element={<PortfolioCurtainPage />} />
         <Route path="/portfolio-vista" element={<PortfolioVistaPage />} />
       </Route>
       <Route element={<MainLayout headerStyle={1} footerStyle={2} />}>
-        <Route path="/portfolio-details-5" element={<PortfolioDetails5Page />} />
+        <Route
+          path="/portfolio-details-5"
+          element={<PortfolioDetails5Page />}
+        />
       </Route>
       <Route element={<MainLayout headerStyle={2} footerStyle={1} noFooter />}>
         <Route path="/portfolio-cinema" element={<PortfolioCinemaPage />} />
-        <Route path="/portfolio-horizontal" element={<PortfolioHorizontalPage />} />
+        <Route
+          path="/portfolio-horizontal"
+          element={<PortfolioHorizontalPage />}
+        />
         <Route path="/portfolio-split" element={<PortfolioSplitPage />} />
         <Route path="/portfolio-stack" element={<PortfolioStackPage />} />
         <Route path="/portfolio-zstack" element={<PortfolioZstackPage />} />
       </Route>
       <Route element={<MainLayout headerStyle={2} footerStyle={2} />}>
-        <Route path="/about-1" element={<About1Page />} />
+        <Route path="/about" element={<About1Page />} /> // change
         <Route path="/about-2" element={<About2Page />} />
         <Route path="/about-3" element={<About3Page />} />
         <Route path="/archive-1" element={<Archive1Page />} />
@@ -101,18 +107,33 @@ export default function App() {
         <Route path="/portfolio-4" element={<Portfolio4Page />} />
         <Route path="/portfolio-5" element={<Portfolio5Page />} />
         <Route path="/portfolio-6" element={<Portfolio6Page />} />
-        <Route path="/portfolio-details-1" element={<PortfolioDetails1Page />} />
-        <Route path="/portfolio-details-2" element={<PortfolioDetails2Page />} />
-        <Route path="/portfolio-details-3" element={<PortfolioDetails3Page />} />
-        <Route path="/portfolio-details-4" element={<PortfolioDetails4Page />} />
-        <Route path="/portfolio-details-6" element={<PortfolioDetails6Page />} />
+        <Route
+          path="/portfolio-details-1"
+          element={<PortfolioDetails1Page />}
+        />
+        <Route
+          path="/portfolio-details-2"
+          element={<PortfolioDetails2Page />}
+        />
+        <Route
+          path="/portfolio-details-3"
+          element={<PortfolioDetails3Page />}
+        />
+        <Route
+          path="/portfolio-details-4"
+          element={<PortfolioDetails4Page />}
+        />
+        <Route
+          path="/portfolio-details-6"
+          element={<PortfolioDetails6Page />}
+        />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/product-archive" element={<ProductArchivePage />} />
         <Route path="/product-cart" element={<ProductCartPage />} />
         <Route path="/product-checkout" element={<ProductCheckoutPage />} />
         <Route path="/product-details" element={<ProductDetailsPage />} />
         <Route path="/services-1" element={<Services1Page />} />
-        <Route path="/services-2" element={<Services2Page />} />
+        <Route path="/services" element={<Services2Page />} /> // change
         <Route path="/services-3" element={<Services3Page />} />
         <Route path="/services-details" element={<ServicesDetailsPage />} />
         <Route path="/team" element={<TeamPage />} />
@@ -130,7 +151,15 @@ export default function App() {
         <Route path="/index-5" element={<Home5Page />} />
         <Route path="/index-5-dark" element={<Home5Page />} />
       </Route>
-      <Route element={<MainLayout headerStyle={6} footerStyle={6} mainClass="bg-neutral-50" />}>
+      <Route
+        element={
+          <MainLayout
+            headerStyle={6}
+            footerStyle={6}
+            mainClass="bg-neutral-50"
+          />
+        }
+      >
         <Route path="/index-6" element={<Home6Page />} />
         <Route path="/index-6-dark" element={<Home6Page />} />
       </Route>
