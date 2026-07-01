@@ -3928,8 +3928,10 @@ input[type="color"] {
   line-height: inherit;
   /* Wavy easing: cubic-bezier with overshoot creates a bounce/settle
      feel that reads as a subtle wave during the swap. */
-  transition: transform 0.45s cubic-bezier(0.5, 1.5, 0.35, 1),
-    opacity 0.25s ease, visibility 0.25s ease;
+  transition:
+    transform 0.45s cubic-bezier(0.5, 1.5, 0.35, 1),
+    opacity 0.25s ease,
+    visibility 0.25s ease;
 }
 .at-main-menu > nav > ul > li > a .at-link-swap .text-1 {
   position: relative;
@@ -16145,9 +16147,14 @@ input.footer-15__form-input:focus {
   padding-top: 70px;
 }
 .sec-1-home-8 .h8-big-title {
+  flex-wrap: wrap;
+  white-space: normal;
+  text-align: center;
+  justify-content: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  /* change */
   gap: clamp(6px, 1.5vw, 24px);
   font-size: clamp(52px, 12.5vw, 240px);
   font-weight: 800;
