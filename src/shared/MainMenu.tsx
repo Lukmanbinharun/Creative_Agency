@@ -18,14 +18,28 @@ const MEGA_ARROW = (
 
 type Item = { to: string; label: string };
 // Customs
-const intel_links1: Item[] = [
-  { to: "/services", label: "Service" },// Services-2
+const about_links1: Item[] = [
+  { to: "/services", label: "Service" }, // Services-2
   { to: "/team", label: "Team" },
   { to: "/pricing", label: "Pricing" },
 ];
-const intel_links2: Item[] = [
-  { to: "/about", label: "About us" }, // abount-1
+const about_links2: Item[] = [
+  { to: "/about", label: "About" }, // abount-
   { to: "/faqs", label: "FAQs" },
+];
+
+const our_crafts_links1: Item[] = [
+  { to: "/portfolio-cinema", label: "Web Design & Development" },
+  { to: "/portfolio-split", label: "Brand Identity" },
+  { to: "/portfolio-vista", label: "Graphic Design" },
+];
+
+const our_crafts_links2: Item[] = [
+  { to: "/portfolio-curtain", label: "Motion & Video" },
+  { to: "/portfolio-vista", label: "AI UGC" },
+  // service page link
+  // { to: "/portfolio-stack", label: "Free Digital Consultancy" },
+  // { to: "/portfolio-curtain", label: "Digital Marketing" },
 ];
 
 const HOME_LIGHT: Item[] = [
@@ -240,15 +254,33 @@ export default function MainMenu() {
 
       <li className="has-dropdown">
         <a href="#" onClick={(e) => e.preventDefault()}>
-          <LinkSwap label="Intel" />
+          <LinkSwap label="About Us" />
         </a>
         <div className="at-submenu submenu at-megamenu">
           <div className="row">
             <div className="col-xl-5">
-              <MegaColumn items={intel_links1} />
+              <MegaColumn items={about_links1} />
             </div>
             <div className="col-xl-5">
-              <MegaColumn items={intel_links2} />
+              <MegaColumn items={about_links2} />
+            </div>
+            {/* <div className="col-xl-4">
+              <MegaColumn title="Other" items={OTHER_LINKS} />
+            </div> */}
+          </div>
+        </div>
+      </li>
+      <li className="has-dropdown">
+        <a href="#" onClick={(e) => e.preventDefault()}>
+          <LinkSwap label="Our Crafts" />
+        </a>
+        <div className="at-submenu submenu at-megamenu">
+          <div className="row">
+            <div className="col-xl-5">
+              <MegaColumn items={our_crafts_links1} />
+            </div>
+            <div className="col-xl-5">
+              <MegaColumn items={our_crafts_links2} />
             </div>
             {/* <div className="col-xl-4">
               <MegaColumn title="Other" items={OTHER_LINKS} />
@@ -257,17 +289,14 @@ export default function MainMenu() {
         </div>
       </li>
 
-      
-      <li className="with-out-dropdown">
+      {/* <li className="with-out-dropdown">
         <NavLink
           to="/portfolio-split"
           className={({ isActive }) => (isActive ? "active" : undefined)}
         >
           <LinkSwap label="Portfelio" />
         </NavLink>
-      </li>
-
-      
+      </li> */}
 
       <li className="with-out-dropdown">
         <NavLink
