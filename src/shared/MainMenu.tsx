@@ -227,14 +227,16 @@ function LinkSwap({ label }: { label: string }) {
 export default function MainMenu() {
   return (
     <MainMenuRootList>
-      <li className="with-out-dropdown">
+      {/* <li className="with-out-dropdown">
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? "active" : undefined)}
         >
           <LinkSwap label="Home" />
         </NavLink>
-      </li>
+      </li> */}
+
+      
       {/* 
           Home pages other tamplate
           <a href="#" onClick={(e) => e.preventDefault()}> replaced by Navlink

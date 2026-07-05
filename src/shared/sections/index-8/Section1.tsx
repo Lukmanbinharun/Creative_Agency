@@ -56,7 +56,7 @@ export default function Section1() {
 
               {/* Outline headline */}
               <h1
-                className="h8-headline at_fade_anim"
+                className="h8-headline at_fade_anim text-scale-anim"
                 data-start="100%"
                 data-delay=".25"
                 data-fade-from="bottom"
@@ -211,7 +211,7 @@ export default function Section1() {
             ============================================================ */}
       <div className="h8-bottom-band">
         <p className="h8-big-title">
-          <span className="h8-word text-scale-anim">Crafty Lab</span>
+          <div className="h8-word text-scale-anim">Crafty Lab</div>
           {/* <sup className="h8-registered">&#174;</sup> */}
           {/* <span className="h8-portrait-frame">
             <img
@@ -222,7 +222,7 @@ export default function Section1() {
               loading="lazy"
             />
           </span> */}
-          <span className="h8-word text-scale-anim">Digital Agency</span>
+          <div className="h8-word text-scale-anim">Digital Agency</div>
         </p>
 
         <div className="h8-bottom-meta d-flex align-items-center justify-content-between">
