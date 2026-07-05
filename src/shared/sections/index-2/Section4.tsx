@@ -1,4 +1,5 @@
 import RevealText from "@/shared/effects/RevealText";
+import { NavLink } from "react-router-dom";
 
 const ARROW_SVG = (
   <svg
@@ -18,6 +19,7 @@ const ARROW_SVG = (
 const SERVICES = [
   {
     title: "Web Design and Development",
+    link: "/services-details",
     description:
       "Branding is more than a visual identity—it's the strategic backbone of your business. We help brands define who they are, what they stand for, and how they connect with their audience.",
     listLeft: [
@@ -35,6 +37,7 @@ const SERVICES = [
   },
   {
     title: "Grapic Design",
+    link: "/services-details",
     description:
       "Great design feels effortless—but it's driven by deep understanding and careful intention. We create user-centered digital experiences that balance aesthetics",
     listLeft: [
@@ -48,6 +51,7 @@ const SERVICES = [
   },
   {
     title: "Motion And Video",
+    link: "/services-details",
     description:
       "Digital marketing is where strategy meets execution. We help brands reach the right audience with the right message at the right moment—using data, creativity, and continuous optimization",
     listLeft: [
@@ -61,6 +65,7 @@ const SERVICES = [
   },
   {
     title: "AI UGC",
+    link: "/services-details",
     description:
       "Optimization is an ongoing commitment to improvement. We analyze real user behavior, identify friction points, and refine digital experiences through testing and iteration—turning insights",
     listLeft: [
@@ -73,7 +78,8 @@ const SERVICES = [
     itemClass: "pb-50",
   },
   {
-    title: "AI UGC",
+    title: "Free Digital Consultancy",
+    link: "/services-details",
     description:
       "Optimization is an ongoing commitment to improvement. We analyze real user behavior, identify friction points, and refine digital experiences through testing and iteration—turning insights",
     listLeft: [
@@ -85,23 +91,42 @@ const SERVICES = [
     image: "/assets/imgs/pages/img-33.webp",
     itemClass: "pb-50",
   },
-  {
-    title: "Web Design and Development",
-    description:
-      "Branding is more than a visual identity—it's the strategic backbone of your business. We help brands define who they are, what they stand for, and how they connect with their audience.",
-    listLeft: [
-      "Research & Insights",
-      "Purpose, Mission & Vision",
-      "Value Proposition",
-    ],
-    listRight: [
-      "Research & Insights",
-      "Purpose, Mission & Vision",
-      "Value Proposition",
-    ],
-    image: "/assets/imgs/pages/img-30.webp",
-    itemClass: "pb-40",
-  },
+
+  // {
+  //   title: "Free Digital Consultancy",
+  //   description:
+  //     "Branding is more than a visual identity—it's the strategic backbone of your business. We help brands define who they are, what they stand for, and how they connect with their audience.",
+  //   listLeft: [
+  //     "Research & Insights",
+  //     "Purpose, Mission & Vision",
+  //     "Value Proposition",
+  //   ],
+  //   listRight: [
+  //     "Research & Insights",
+  //     "Purpose, Mission & Vision",
+  //     "Value Proposition",
+  //   ],
+  //   image: "/assets/imgs/pages/img-30.webp",
+  //   itemClass: "pb-40",
+  // },
+  // {
+  //   title: "Digital Marketing",
+  //   link: "",
+  //   description:
+  //     "Branding is more than a visual identity—it's the strategic backbone of your business. We help brands define who they are, what they stand for, and how they connect with their audience.",
+  //   listLeft: [
+  //     "Research & Insights",
+  //     "Purpose, Mission & Vision",
+  //     "Value Proposition",
+  //   ],
+  //   listRight: [
+  //     "Research & Insights",
+  //     "Purpose, Mission & Vision",
+  //     "Value Proposition",
+  //   ],
+  //   image: "/assets/imgs/pages/img-30.webp",
+  //   itemClass: "pb-40",
+  // },
 ];
 
 type Section4Props = {
@@ -144,7 +169,7 @@ export default function Section4({ className }: Section4Props) {
                     <div className="col-lg-6 col-12">
                       <div className="d-flex flex-column justify-content-between h-100 py-4 px-2">
                         <h1 className="fz-ds-1 fw-500 text-scale-anim-2 pb-xxl-5 pb-4">
-                          {service.title}
+                          <NavLink to={service.link}>{service.title}</NavLink>
                         </h1>
                         <div className="d-xxl-flex align-items-end">
                           <p className="fz-font-2xl neutral-950 reveal-text pe-xxl-5 mb-3">
