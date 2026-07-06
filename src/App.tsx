@@ -1,4 +1,3 @@
-import { Route, Routes } from "react-router-dom";
 import MainLayout from "@/layouts/MainLayout";
 import About1Page from "@/pages/About1Page";
 import About2Page from "@/pages/About2Page";
@@ -18,7 +17,6 @@ import Home12Page from "@/pages/Home12Page";
 import Home13Page from "@/pages/Home13Page";
 import Home14Page from "@/pages/Home14Page";
 import Home15Page from "@/pages/Home15Page";
-import Home1Page from "@/pages/Home1Page";
 import Home2Page from "@/pages/Home2Page";
 import Home3Page from "@/pages/Home3Page";
 import Home4Page from "@/pages/Home4Page";
@@ -27,6 +25,7 @@ import Home6Page from "@/pages/Home6Page";
 import Home7Page from "@/pages/Home7Page";
 import Home8Page from "@/pages/Home8Page";
 import Home9Page from "@/pages/Home9Page";
+import NotFoundPage from "@/pages/NotFoundPage";
 import Portfolio1Page from "@/pages/Portfolio1Page";
 import Portfolio2Page from "@/pages/Portfolio2Page";
 import Portfolio3Page from "@/pages/Portfolio3Page";
@@ -57,18 +56,25 @@ import Services3Page from "@/pages/Services3Page";
 import ServicesDetailsPage from "@/pages/ServicesDetailsPage";
 import TeamDetailsPage from "@/pages/TeamDetailsPage";
 import TeamPage from "@/pages/TeamPage";
-import NotFoundPage from "@/pages/NotFoundPage";
+import { Route, Routes } from "react-router-dom";
 
 export default function App() {
   return (
     <Routes>
-      <Route element={<MainLayout headerStyle={8} footerStyle={8} />}> // change
+      <Route element={<MainLayout headerStyle={8} footerStyle={8} />}>
+        {" "}
+        // change
         <Route path="/" element={<Home8Page />} />
         <Route path="/index-dark" element={<Home8Page />} />
       </Route>
       <Route element={<MainLayout headerStyle={1} footerStyle={1} noFooter />}>
-        <Route path="/portfolio-curtain" element={<PortfolioCurtainPage />} />
-        <Route path="/portfolio-vista" element={<PortfolioVistaPage />} />
+        {/* <Route path="/portfolio-curtain" element={<PortfolioCurtainPage />} /> */}
+        <Route path="/motion&video" element={<PortfolioCurtainPage />} />
+        <Route
+          path="/grapic-degine&devlopment"
+          element={<PortfolioVistaPage />}
+        />
+        <Route path="/Ai-UGC" element={<PortfolioVistaPage />} />
       </Route>
       <Route element={<MainLayout headerStyle={1} footerStyle={2} />}>
         <Route
@@ -77,12 +83,15 @@ export default function App() {
         />
       </Route>
       <Route element={<MainLayout headerStyle={2} footerStyle={1} noFooter />}>
-        <Route path="/portfolio-cinema" element={<PortfolioCinemaPage />} />
+        {/* <Route path="/portfolio-cinema" element={<PortfolioCinemaPage />} /> */}
+        <Route path="/portfolio-Web" element={<PortfolioCinemaPage />} />
+
         <Route
           path="/portfolio-horizontal"
           element={<PortfolioHorizontalPage />}
         />
-        <Route path="/portfolio-split" element={<PortfolioSplitPage />} />
+        {/* <Route path="/portfolio-split" element={<PortfolioSplitPage />} /> */}
+        <Route path="/brand-identity" element={<PortfolioSplitPage />} />
         <Route path="/portfolio-stack" element={<PortfolioStackPage />} />
         <Route path="/portfolio-zstack" element={<PortfolioZstackPage />} />
       </Route>

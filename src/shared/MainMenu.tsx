@@ -29,14 +29,14 @@ const about_links2: Item[] = [
 ];
 
 const our_crafts_links1: Item[] = [
-  { to: "/portfolio-cinema", label: "Web Design & Development" },
-  { to: "/portfolio-split", label: "Brand Identity" },
-  { to: "/portfolio-vista", label: "Graphic Design" },
+  { to: "/portfolio-Web", label: "Web Design & Development" }, //"/portfolio-cinema"
+  { to: "/brand-identity", label: "Brand Identity" }, // /portfolio-split
+  { to: "/grapic-degine&devlopment", label: "Graphic Design & Development" }, // portfolio-vista
 ];
 
 const our_crafts_links2: Item[] = [
-  { to: "/portfolio-curtain", label: "Motion & Video" },
-  { to: "/portfolio-vista", label: "AI UGC" },
+  { to: "/motion&video", label: "Motion & Video" }, ///portfolio-curtain
+  { to: "/Ai-UGC", label: "AI UGC" },
   // service page link
   // { to: "/portfolio-stack", label: "Free Digital Consultancy" },
   // { to: "/portfolio-curtain", label: "Digital Marketing" },
@@ -236,7 +236,6 @@ export default function MainMenu() {
         </NavLink>
       </li> */}
 
-      
       {/* 
           Home pages other tamplate
           <a href="#" onClick={(e) => e.preventDefault()}> replaced by Navlink
