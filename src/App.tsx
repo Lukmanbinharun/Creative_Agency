@@ -56,7 +56,7 @@ import ProductArchivePage from "@/pages/ProductArchivePage";
 import ProductCartPage from "@/pages/ProductCartPage";
 import ProductCheckoutPage from "@/pages/ProductCheckoutPage";
 import ProductDetailsPage from "@/pages/ProductDetailsPage";
-import SeoPage from "@/pages/SeoPage";
+import SeoServicePage from "@/pages/SeoServicePage";
 import Services1Page from "@/pages/Services1Page";
 import Services2Page from "@/pages/Services2Page";
 import Services3Page from "@/pages/Services3Page";
@@ -157,16 +157,39 @@ export default function App() {
           path="/web-design-development"
           element={<WebDesignDevlopmentPage />}
         />
-        <Route path="/seo" element={<SeoPage />} />
+        <Route
+          path="/services/web-design-development"
+          element={<WebDesignDevlopmentPage />}
+        />
+        <Route path="/seo" element={<SeoServicePage />} />
+        <Route path="/services/seo" element={<SeoServicePage />} />
         <Route path="/branding" element={<BrandingPage />} />
+        <Route path="/services/branding" element={<BrandingPage />} />
         <Route path="/graphics-design" element={<GraphicsDesignPage />} />
+        <Route
+          path="/services/graphics-design"
+          element={<GraphicsDesignPage />}
+        />
         <Route
           path="/motion-graphics-video"
           element={<MotionGraphicsVideoPage />}
         />
+        <Route
+          path="/services/motion-graphics-video"
+          element={<MotionGraphicsVideoPage />}
+        />
         <Route path="/digital-marketing" element={<DigitalMarketingPage />} />
+        <Route
+          path="/services/digital-marketing"
+          element={<DigitalMarketingPage />}
+        />
         <Route path="/ai-ugc" element={<AiUgcPage />} />
+        <Route path="/services/ai-ugc" element={<AiUgcPage />} />
         <Route path="/free-consultancy" element={<FreeConsultancyPage />} />
+        <Route
+          path="/services/free-consultancy"
+          element={<FreeConsultancyPage />}
+        />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/team-details" element={<TeamDetailsPage />} />
       </Route>
