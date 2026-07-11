@@ -16,118 +16,153 @@ const ARROW_SVG = (
   </svg>
 );
 
-const SERVICES = [
+const SERVICES: ServiceItem[] = [
   {
-    title: "Web Design and Development",
+    title: "Web Design & Development",
     link: "/services-details",
     description:
-      "Branding is more than a visual identity—it's the strategic backbone of your business. We help brands define who they are, what they stand for, and how they connect with their audience.",
+      "Conversion-focused websites and web apps built with modern stacks. From a 5-page marketing site to a full SaaS dashboard, we design and engineer for speed, scalability, and a flawless user experience across every device.",
     listLeft: [
-      "Research & Insights",
-      "Purpose, Mission & Vision",
-      "Value Proposition",
+      "UI/UX Design",
+      "Next.js / React / Vue",
+      "Shopify / Webflow / Headless CMS",
     ],
     listRight: [
-      "Research & Insights",
-      "Purpose, Mission & Vision",
-      "Value Proposition",
+      "E-commerce",
+      "Web app development",
+      "Performance optimization",
     ],
     image: "/assets/imgs/pages/img-30.webp",
     itemClass: "pb-40",
   },
   {
-    title: "Grapic Design",
+    title: "SEO",
     link: "/services-details",
     description:
-      "Great design feels effortless—but it's driven by deep understanding and careful intention. We create user-centered digital experiences that balance aesthetics",
+      "Technical, on-page, and content SEO that compounds over time. We audit your site, fix what's broken, build content that earns links, and track every keyword that matters — so you see traffic grow month over month, not just spikes.",
     listLeft: [
-      "UX Research & User Journeys",
-      "Information Architecture",
-      "Wireframing & Prototyping",
+      "Technical SEO audit",
+      "Keyword strategy",
+      "On-page optimization",
     ],
-    listRight: ["Interface Design (UI)", "Design Systems"],
+    listRight: [
+      "Content roadmap",
+      "Link building",
+      "Local SEO / Google Business Profile",
+    ],
     image: "/assets/imgs/pages/img-31.webp",
     itemClass: "pb-40",
   },
   {
-    title: "Motion And Video",
+    title: "Branding",
     link: "/services-details",
     description:
-      "Digital marketing is where strategy meets execution. We help brands reach the right audience with the right message at the right moment—using data, creativity, and continuous optimization",
+      "Identities that are impossible to ignore. We dig into your positioning, design a visual language that fits, and document it so your team can apply it consistently for years.",
     listLeft: [
-      "Digital Strategy",
-      "Content Marketing",
-      "Social Media Marketing",
+      "Brand strategy & positioning",
+      "Logo & visual identity",
+      "Color & typography system",
     ],
-    listRight: ["Paid Advertising (PPC)", "Email Marketing"],
+    listRight: ["Brand guidelines", "Naming", "Brand voice & messaging"],
     image: "/assets/imgs/pages/img-32.webp",
+    itemClass: "pb-40",
+    badge: "Popular",
+  },
+  {
+    title: "Graphics Design",
+    link: "/services-details",
+    description:
+      "Design that captures attention and communicates clearly. From social creatives to packaging, pitch decks to print collateral — design that captures attention and communicates your message with clarity.",
+    listLeft: [
+      "Social media creatives",
+      "Print & packaging",
+      "Pitch decks & sales collateral",
+    ],
+    listRight: [
+      "Illustration & iconography",
+      "Ad creatives",
+      "Event & signage design",
+    ],
+    image: "/assets/imgs/pages/img-33.webp",
+    itemClass: "pb-50",
+  },
+  {
+    title: "Motion Graphics & Video",
+    link: "/services-details",
+    description:
+      "Stories told in seconds, not paragraphs. Explainer videos, product demos, and scroll-stopping motion design that tells your story in seconds.",
+    listLeft: ["Explainer videos", "Product demos", "Social reels & shorts"],
+    listRight: ["3D motion graphics", "Logo animations", "Sound design"],
+    image: "/assets/imgs/pages/img-33.webp",
+    itemClass: "pb-50",
+  },
+  {
+    title: "Digital Marketing",
+    link: "/services-details",
+    description:
+      "Full-funnel campaigns built for measurable ROI. We don't just run ads; we build a growth engine that compounds.",
+    listLeft: [
+      "Paid ads (Meta, Google, TikTok)",
+      "Social media management",
+      "Email marketing & automation",
+    ],
+    listRight: [
+      "Conversion tracking & analytics",
+      "A/B testing framework",
+      "Monthly growth reporting",
+    ],
+    image: "/assets/imgs/pages/img-30.webp",
     itemClass: "pb-40",
   },
   {
     title: "AI UGC",
     link: "/services-details",
     description:
-      "Optimization is an ongoing commitment to improvement. We analyze real user behavior, identify friction points, and refine digital experiences through testing and iteration—turning insights",
+      "Authentic-looking UGC, scaled infinitely with AI. Perfect for ad testing, social content, and brands that need volume without sacrificing quality.",
     listLeft: [
-      "Conversion Rate Optimization (CRO)",
-      "A/B Testing",
-      "User Behavior Analysis",
+      "AI avatars & voice cloning",
+      "Script + visual production",
+      "A/B variant generation",
     ],
-    listRight: ["SEO Optimization", "Performance Audits"],
-    image: "/assets/imgs/pages/img-33.webp",
+    listRight: [
+      "Multi-language localization",
+      "Ad-ready formats",
+      "Weekly content batches",
+    ],
+    image: "/assets/imgs/pages/img-31.webp",
     itemClass: "pb-50",
+    badge: "Popular",
   },
   {
-    title: "Free Digital Consultancy",
+    title: "Free Consultancy",
     link: "/services-details",
     description:
-      "Optimization is an ongoing commitment to improvement. We analyze real user behavior, identify friction points, and refine digital experiences through testing and iteration—turning insights",
+      "A 30-min strategy call. No strings, just clarity. We will audit your digital presence, identify quick wins and bigger opportunities, and share a clear roadmap.",
     listLeft: [
-      "Conversion Rate Optimization (CRO)",
-      "A/B Testing",
-      "User Behavior Analysis",
+      "Digital presence audit",
+      "Competitor analysis",
+      "Quick-win identification",
     ],
-    listRight: ["SEO Optimization", "Performance Audits"],
-    image: "/assets/imgs/pages/img-33.webp",
+    listRight: [
+      "Custom roadmap",
+      "Tool & stack recommendations",
+      "30-minute video call",
+    ],
+    image: "/assets/imgs/pages/img-32.webp",
     itemClass: "pb-50",
   },
-
-  // {
-  //   title: "Free Digital Consultancy",
-  //   description:
-  //     "Branding is more than a visual identity—it's the strategic backbone of your business. We help brands define who they are, what they stand for, and how they connect with their audience.",
-  //   listLeft: [
-  //     "Research & Insights",
-  //     "Purpose, Mission & Vision",
-  //     "Value Proposition",
-  //   ],
-  //   listRight: [
-  //     "Research & Insights",
-  //     "Purpose, Mission & Vision",
-  //     "Value Proposition",
-  //   ],
-  //   image: "/assets/imgs/pages/img-30.webp",
-  //   itemClass: "pb-40",
-  // },
-  // {
-  //   title: "Digital Marketing",
-  //   link: "",
-  //   description:
-  //     "Branding is more than a visual identity—it's the strategic backbone of your business. We help brands define who they are, what they stand for, and how they connect with their audience.",
-  //   listLeft: [
-  //     "Research & Insights",
-  //     "Purpose, Mission & Vision",
-  //     "Value Proposition",
-  //   ],
-  //   listRight: [
-  //     "Research & Insights",
-  //     "Purpose, Mission & Vision",
-  //     "Value Proposition",
-  //   ],
-  //   image: "/assets/imgs/pages/img-30.webp",
-  //   itemClass: "pb-40",
-  // },
 ];
+
+type ServiceItem = {
+  title: string;
+  link: string;
+  description: string;
+  listLeft: string[];
+  listRight: string[];
+  image: string;
+  itemClass: string;
+  badge?: string;
+};
 
 type Section4Props = {
   className?: string;
@@ -169,7 +204,14 @@ export default function Section4({ className }: Section4Props) {
                     <div className="col-lg-6 col-12">
                       <div className="d-flex flex-column justify-content-between h-100 py-4 px-2">
                         <h1 className="fz-ds-1 fw-500 text-scale-anim-2 pb-xxl-5 pb-4">
-                          <NavLink to={service.link}>{service.title}</NavLink>
+                          <NavLink to={service.link}>
+                            {service.title}
+                            {service.badge ? (
+                              <span className="ms-2 fs-6 fw-600 text-uppercase align-middle">
+                                {service.badge}
+                              </span>
+                            ) : null}
+                          </NavLink>
                         </h1>
                         <div className="d-xxl-flex align-items-end">
                           <p className="fz-font-2xl neutral-950 reveal-text pe-xxl-5 mb-3">
