@@ -2,15 +2,20 @@ import MainLayout from "@/layouts/MainLayout";
 import About1Page from "@/pages/About1Page";
 import About2Page from "@/pages/About2Page";
 import About3Page from "@/pages/About3Page";
+import AiUgcPage from "@/pages/AiUgcPage";
 import Archive1Page from "@/pages/Archive1Page";
 import Archive2Page from "@/pages/Archive2Page";
 import Archive3Page from "@/pages/Archive3Page";
 import Archive4Page from "@/pages/Archive4Page";
 import BlogDetailsPage from "@/pages/BlogDetailsPage";
+import BrandingPage from "@/pages/BrandingPage";
 import ComingSoonPage from "@/pages/ComingSoonPage";
 import Contact1Page from "@/pages/Contact1Page";
 import Contact2Page from "@/pages/Contact2Page";
+import DigitalMarketingPage from "@/pages/DigitalMarketingPage";
 import FaqsPage from "@/pages/FaqsPage";
+import FreeConsultancyPage from "@/pages/FreeConsultancyPage";
+import GraphicsDesignPage from "@/pages/GraphicsDesignPage";
 import Home10Page from "@/pages/Home10Page";
 import Home11Page from "@/pages/Home11Page";
 import Home12Page from "@/pages/Home12Page";
@@ -25,6 +30,7 @@ import Home6Page from "@/pages/Home6Page";
 import Home7Page from "@/pages/Home7Page";
 import Home8Page from "@/pages/Home8Page";
 import Home9Page from "@/pages/Home9Page";
+import MotionGraphicsVideoPage from "@/pages/MotionGraphicsVideoPage";
 import NotFoundPage from "@/pages/NotFoundPage";
 import Portfolio1Page from "@/pages/Portfolio1Page";
 import Portfolio2Page from "@/pages/Portfolio2Page";
@@ -50,12 +56,14 @@ import ProductArchivePage from "@/pages/ProductArchivePage";
 import ProductCartPage from "@/pages/ProductCartPage";
 import ProductCheckoutPage from "@/pages/ProductCheckoutPage";
 import ProductDetailsPage from "@/pages/ProductDetailsPage";
+import SeoPage from "@/pages/SeoPage";
 import Services1Page from "@/pages/Services1Page";
 import Services2Page from "@/pages/Services2Page";
 import Services3Page from "@/pages/Services3Page";
 import ServicesDetailsPage from "@/pages/ServicesDetailsPage";
 import TeamDetailsPage from "@/pages/TeamDetailsPage";
 import TeamPage from "@/pages/TeamPage";
+import WebDesignDevlopmentPage from "@/pages/Web-design-devlopment";
 import { Route, Routes } from "react-router-dom";
 
 export default function App() {
@@ -145,6 +153,20 @@ export default function App() {
         <Route path="/services" element={<Services2Page />} /> // change
         <Route path="/services-3" element={<Services3Page />} />
         <Route path="/services-details" element={<ServicesDetailsPage />} />
+        <Route
+          path="/web-design-development"
+          element={<WebDesignDevlopmentPage />}
+        />
+        <Route path="/seo" element={<SeoPage />} />
+        <Route path="/branding" element={<BrandingPage />} />
+        <Route path="/graphics-design" element={<GraphicsDesignPage />} />
+        <Route
+          path="/motion-graphics-video"
+          element={<MotionGraphicsVideoPage />}
+        />
+        <Route path="/digital-marketing" element={<DigitalMarketingPage />} />
+        <Route path="/ai-ugc" element={<AiUgcPage />} />
+        <Route path="/free-consultancy" element={<FreeConsultancyPage />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/team-details" element={<TeamDetailsPage />} />
       </Route>
