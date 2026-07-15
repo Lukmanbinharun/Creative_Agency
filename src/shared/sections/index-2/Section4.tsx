@@ -19,7 +19,7 @@ const ARROW_SVG = (
 const SERVICES: ServiceItem[] = [
   {
     title: "Web Design & Development",
-    link: "/web-design-development",
+    link: "web-design-development",
     description:
       "Conversion-focused websites and web apps built with modern stacks. From a 5-page marketing site to a full SaaS dashboard, we design and engineer for speed, scalability, and a flawless user experience across every device.",
     listLeft: [
@@ -37,7 +37,7 @@ const SERVICES: ServiceItem[] = [
   },
   {
     title: "SEO",
-    link: "/seo",
+    link: "seo",
     description:
       "Technical, on-page, and content SEO that compounds over time. We audit your site, fix what's broken, build content that earns links, and track every keyword that matters — so you see traffic grow month over month, not just spikes.",
     listLeft: [
@@ -55,7 +55,7 @@ const SERVICES: ServiceItem[] = [
   },
   {
     title: "Branding",
-    link: "/branding",
+    link: "branding",
     description:
       "Identities that are impossible to ignore. We dig into your positioning, design a visual language that fits, and document it so your team can apply it consistently for years.",
     listLeft: [
@@ -70,7 +70,7 @@ const SERVICES: ServiceItem[] = [
   },
   {
     title: "Graphics Design",
-    link: "/graphics-design",
+    link: "graphics-design",
     description:
       "Design that captures attention and communicates clearly. From social creatives to packaging, pitch decks to print collateral — design that captures attention and communicates your message with clarity.",
     listLeft: [
@@ -88,7 +88,7 @@ const SERVICES: ServiceItem[] = [
   },
   {
     title: "Motion Graphics & Video",
-    link: "/motion-graphics-video",
+    link: "motion-graphics-video",
     description:
       "Stories told in seconds, not paragraphs. Explainer videos, product demos, and scroll-stopping motion design that tells your story in seconds.",
     listLeft: ["Explainer videos", "Product demos", "Social reels & shorts"],
@@ -98,7 +98,7 @@ const SERVICES: ServiceItem[] = [
   },
   {
     title: "Digital Marketing",
-    link: "/digital-marketing",
+    link: "digital-marketing",
     description:
       "Full-funnel campaigns built for measurable ROI. We don't just run ads; we build a growth engine that compounds.",
     listLeft: [
@@ -116,7 +116,7 @@ const SERVICES: ServiceItem[] = [
   },
   {
     title: "AI UGC",
-    link: "/ai-ugc",
+    link: "ai-ugc",
     description:
       "Authentic-looking UGC, scaled infinitely with AI. Perfect for ad testing, social content, and brands that need volume without sacrificing quality.",
     listLeft: [
@@ -206,11 +206,11 @@ export default function Section4({ className }: Section4Props) {
                         <h1 className="fz-ds-1 fw-500 text-scale-anim-2 pb-xxl-5 pb-4">
                           <NavLink to={service.link}>
                             {service.title}
-                            {service.badge ? (
+                            {/* {service.badge ? (
                               <span className="ms-2 fs-6 fw-600 text-uppercase align-middle">
                                 {service.badge}
                               </span>
-                            ) : null}
+                            ) : null} */}
                           </NavLink>
                         </h1>
                         <div className="d-xxl-flex align-items-end">
