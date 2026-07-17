@@ -19,7 +19,7 @@ const ARROW_SVG = (
 const SERVICES: ServiceItem[] = [
   {
     title: "Web Design & Development",
-    link: "web-design-development",
+    link: "/services/web-design-development",
     description:
       "Conversion-focused websites and web apps built with modern stacks. From a 5-page marketing site to a full SaaS dashboard, we design and engineer for speed, scalability, and a flawless user experience across every device.",
     listLeft: [
@@ -36,8 +36,8 @@ const SERVICES: ServiceItem[] = [
     itemClass: "pb-40",
   },
   {
-    title: "SEO",
-    link: "seo",
+    title: "/SEO",
+    link: "services/seo",
     description:
       "Technical, on-page, and content SEO that compounds over time. We audit your site, fix what's broken, build content that earns links, and track every keyword that matters — so you see traffic grow month over month, not just spikes.",
     listLeft: [
@@ -55,7 +55,7 @@ const SERVICES: ServiceItem[] = [
   },
   {
     title: "Branding",
-    link: "branding",
+    link: "/services/branding",
     description:
       "Identities that are impossible to ignore. We dig into your positioning, design a visual language that fits, and document it so your team can apply it consistently for years.",
     listLeft: [
@@ -70,7 +70,7 @@ const SERVICES: ServiceItem[] = [
   },
   {
     title: "Graphics Design",
-    link: "graphics-design",
+    link: "/services/graphics-design",
     description:
       "Design that captures attention and communicates clearly. From social creatives to packaging, pitch decks to print collateral — design that captures attention and communicates your message with clarity.",
     listLeft: [
@@ -88,7 +88,7 @@ const SERVICES: ServiceItem[] = [
   },
   {
     title: "Motion Graphics & Video",
-    link: "motion-graphics-video",
+    link: "/services/motion-graphics-video",
     description:
       "Stories told in seconds, not paragraphs. Explainer videos, product demos, and scroll-stopping motion design that tells your story in seconds.",
     listLeft: ["Explainer videos", "Product demos", "Social reels & shorts"],
@@ -98,7 +98,7 @@ const SERVICES: ServiceItem[] = [
   },
   {
     title: "Digital Marketing",
-    link: "digital-marketing",
+    link: "/services/digital-marketing",
     description:
       "Full-funnel campaigns built for measurable ROI. We don't just run ads; we build a growth engine that compounds.",
     listLeft: [
@@ -116,7 +116,7 @@ const SERVICES: ServiceItem[] = [
   },
   {
     title: "AI UGC",
-    link: "ai-ugc",
+    link: "/services/ai-ugc",
     description:
       "Authentic-looking UGC, scaled infinitely with AI. Perfect for ad testing, social content, and brands that need volume without sacrificing quality.",
     listLeft: [
@@ -135,7 +135,7 @@ const SERVICES: ServiceItem[] = [
   },
   {
     title: "Free Consultancy",
-    link: "/free-consultancy",
+    link: "/services/free-consultancy",
     description:
       "A 30-min strategy call. No strings, just clarity. We will audit your digital presence, identify quick wins and bigger opportunities, and share a clear roadmap.",
     listLeft: [
