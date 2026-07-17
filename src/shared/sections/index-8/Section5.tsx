@@ -1,49 +1,12 @@
 import Marquee from "react-fast-marquee";
-type Brand = {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-};
 
-const BRAND_SOURCES: Brand[] = [
-  {
-    src: "/assets/imgs/icons/brand-1.webp",
-    alt: "logo-brand",
-    width: 147,
-    height: 40,
-  },
-  {
-    src: "/assets/imgs/icons/brand-2.webp",
-    alt: "logo-brand",
-    width: 173,
-    height: 43,
-  },
-  {
-    src: "/assets/imgs/icons/brand-3.webp",
-    alt: "logo-brand",
-    width: 162,
-    height: 47,
-  },
-  {
-    src: "/assets/imgs/icons/brand-4.webp",
-    alt: "logo-brand",
-    width: 167,
-    height: 35,
-  },
-  {
-    src: "/assets/imgs/icons/brand-5.webp",
-    alt: "logo-brand",
-    width: 105,
-    height: 24,
-  },
-  {
-    src: "/assets/imgs/icons/brand-6.webp",
-    alt: "logo-brand",
-    width: 170,
-    height: 48,
-  },
-];
+// type Brand = {
+//   src: string;
+//   alt: string;
+//   width: number;
+//   height: number;
+// };
+
 
 
 export default function Section3() {
@@ -89,7 +52,7 @@ export default function Section3() {
                 <div className="brand-item dark-mode-invert fz-font-lg">
                   <span
                     key={brand}
-                    className="fs-5 fw-bold "
+                    className="fs-5 fw-bolder "
                   >
                     {brand}
                   </span>

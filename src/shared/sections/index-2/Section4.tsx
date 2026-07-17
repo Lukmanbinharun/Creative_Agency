@@ -36,7 +36,7 @@ const SERVICES: ServiceItem[] = [
     itemClass: "pb-40",
   },
   {
-    title: "/SEO",
+    title: "SEO",
     link: "services/seo",
     description:
       "Technical, on-page, and content SEO that compounds over time. We audit your site, fix what's broken, build content that earns links, and track every keyword that matters — so you see traffic grow month over month, not just spikes.",
